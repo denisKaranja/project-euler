@@ -45,7 +45,7 @@ for index, name in enumerate(sorted(namesList)):
 	nameSum *= index
 	allNamesSum += nameSum
 
-	print name + " pos "+ str(index) +" ->> " + str(nameSum) +" \nTotal count so far is " + str(allNamesSum)+"\n"
+	print name + " pos "+ str(index) +" ->> " + str(nameSum) +" \nTotal count so far is %d * %d == " % (nameSum, index) + str(allNamesSum)+"\n"
 
 
 
