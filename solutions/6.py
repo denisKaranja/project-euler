@@ -1,7 +1,7 @@
 #Author: Denis Karanja,
-#School of Computing and Informatics,
-#The University of Nairobi,
-#dee.caranja@gmail.com
+#Institution: The University of Nairobi, Kenya,
+#Department: School of Computing and Informatics,
+#Email: dee.caranja@gmail.com,
 #Euler project solution = 6(Sum square difference)
 
 def sumOfSquares(num):
