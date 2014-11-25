@@ -10,4 +10,4 @@ def selfPower(num):
 	else:
 		return num**num + selfPower(num - 1)
 
-print selfPower(100)
+print selfPower(999) + 1000**1000 #9110846700
