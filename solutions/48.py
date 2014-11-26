@@ -13,4 +13,4 @@ def selfPower(num):
 startTime = time.clock()
 
 print selfPower(999) + 1000**1000 #9110846700
-print "Program took %f time to execute" % (time.clock() - startTime)
+print "Program took %f secsonds to execute" % (time.clock() - startTime)
