@@ -3,11 +3,14 @@
 #Department: School of Computing and Informatics,
 #Email: dee.caranja@gmail.com,
 #Euler project solution = 48(Sum of Self powers i.e 1^1 + 2^2 + 3^3 +...+ 100^100)
+import time
 
 def selfPower(num):
 	if num == 1:
 		return 1
 	else:
 		return num**num + selfPower(num - 1)
+startTime = time.clock()
 
 print selfPower(999) + 1000**1000 #9110846700
+print "Program took %f time to execute" % (time.clock() - startTime)
