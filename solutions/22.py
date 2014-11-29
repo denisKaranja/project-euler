@@ -23,8 +23,8 @@ for index, name in enumerate(sorted(namesList)):
 	nameSum *= index+1
 	allNamesSum += nameSum
 
-	#print name + " pos "+ str(index+1) +" ->> " + str(temp_nameSum) +" \nTotal count so far is %d * %d == "\
-	#% (nameSum, index+1) + str(allNamesSum)+"\n"
+	print name + " pos "+ str(index+1) +" ->> " + str(temp_nameSum) +" \nTotal count so far is %d * %d == "\
+	% (nameSum, index+1) + str(allNamesSum)+"\n"
 
 print "\nTotal name score ->>", allNamesSum
 
