@@ -20,7 +20,7 @@ for index, name in enumerate(sorted(namesList)):
 			nameSum += alphabets.get(i)
 
 	temp_nameSum = nameSum
-	nameSum *= index+1
+	nameSum *= index + 1
 	allNamesSum += nameSum
 
 	#print name + " pos "+ str(index+1) +" ->> " + str(temp_nameSum) +" \nTotal count so far is %d * %d == "\

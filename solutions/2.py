@@ -4,11 +4,20 @@
 #Email: dee.caranja@gmail.com,
 #Euler project solution = 2(Even fibonacci number <= 4,000,000)
 
-evenSum = 0
-def fibo(num):
-	if num  <= 0 or num == 1:
-		return 1
-	else:
-		return fibo(num - 1) + fibo(num - 2) 
+#itterative Fibo
+def iterrativeFibo(num):
+	x = i = sum = 0
+	y = z = 1
+	
+	for i in range(num+1):
+		x = y
+		y = z
+		z = x + y
+		if x % 2 == 0:
+			sum += x
+	print x
+	return sum
 
-print fibo(30)
+print iterrativeFibo(32)
+
+limit = 40
