@@ -22,13 +22,14 @@ def prime(num):
 	
 	return True
 def max(list):
-	for i in xrange(len(list)):
+	length = len(list)
+	for i in xrange(length):
 		maxNum = list[i]
 		if list[i] > maxNum:
 			list[i] = maxNum
 	return maxNum
 
-number = 13195
+number = 600851475143
 output = []
 i = 0
 while i <= number:
