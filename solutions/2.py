@@ -6,7 +6,8 @@ Email: dee.caranja@gmail.com,
 Euler project solution = 2(Even fibonacci number <= 4,000,000)
 Status:..COMPELETED
 """
-
+import time
+startTime = time.clock()
 #itterative Fibo
 def iterrativeFibo(num):
 	x = i = evenSum = 0
@@ -22,7 +23,8 @@ def iterrativeFibo(num):
 		if x > limit: 
 			print "Value has exceeded the {} limit. Try a lower number please".format(limit)
 			break
-	print "Value of current x is {}".format(x)
+	print "\nValue of current x is {}".format(x)
 	return evenSum
 
 print "Sum of even integers is : {}".format(iterrativeFibo(32))
+print "->>%f secs to execute\n"%(time.clock() - startTime)
