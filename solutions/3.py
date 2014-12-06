@@ -4,7 +4,7 @@ Institution: The University of Nairobi, Kenya,
 Department: School of Computing and Informatics,
 Email: dee.caranja@gmail.com,
 Euler project solution = 3(Largest Prime factor of 600851475143)
-Status.. PENDING
+Status.. COMPLETED
 """
 import time
 startTime = time.clock()
