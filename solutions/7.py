@@ -21,7 +21,5 @@ def prime(num):
 	return True
 
 limit = 1000000
-length = (filter(prime, range(limit)))
-
-print length[10000]
+print (filter(prime, range(limit)))[10000]
 print "Program took %.4f secs to execute\n"%(time.clock() - startTime)
