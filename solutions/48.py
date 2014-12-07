@@ -13,5 +13,5 @@ def selfPower(num):
 startTime = time.clock()
 a = selfPower(999) + 1000**1000
 b = list(str(a))
-print str(b[-10:])#9110846700
+print b[-10:]#9110846700
 print "Program took %f secsonds to execute" % (time.clock() - startTime)
