@@ -20,6 +20,6 @@ def prime(num):
 		division += 2
 	return True
 
-limit = 1000000
+limit = 105000
 print (filter(prime, range(limit)))[10000]
 print "Program took %.4f secs to execute\n"%(time.clock() - startTime)
