@@ -21,5 +21,5 @@ def prime(num):
 	return True
 
 limit = 105000
-print (filter(prime, range(limit)))[10000]
+print "The 10001st prime number is {}".format((filter(prime, range(limit)))[10000])
 print "Program took %.4f secs to execute\n"%(time.clock() - startTime)
