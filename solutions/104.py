@@ -11,29 +11,35 @@ Status: PENDING...
 import time
 startTime = time.clock()
 
-"""def recursive_fibo(num):
-	if num == 1 or num == 0:
-		return num
-	else:
-		return recursive_fibo(num - 1) + recursive_fibo(num - 2)"""
-
 def iterrativeFibo(num):
 	x = i = 0
 	y = z = 1
-	for i in range(0, num+1):
+	for i in xrange(0, num+1):
 		x = y
 		y = z
 		z = x + y
-	return x
 
-print "Calculating using itterative fibonacci. Please wait..."
-print "\tUsing itterative {}".format(iterrativeFibo(10))
+	answer = str(x).replace("","-").split("-")
+	answer = answer[1:len(answer)-1]
+
+	last_nine = str(answer[-9:])
+	first_nine = str(answer[0:9])
+
+	#convert from list to string
+	char_to_remove = ["'", "[", "]", ", "]
+	for char in char_to_remove:
+		if char in last_nine or char in first_nine:
+			last_nine = last_nine.replace(char, "")
+			first_nine = first_nine.replace(char, "")
+	
+	#add the numbers up
+	last_nine = sum([int(digit) for digit in last_nine])
+	first_nine = sum([int(digit) for digit in first_nine])
+	return (first_nine, last_nine)
+
+
+
+print "Getting the last 9 digits..."
+print iterrativeFibo(540)
 iterrative_time = time.clock() - startTime
 print "\tRun time... %.5f(secs) or %.5f(mins)" % (iterrative_time, (iterrative_time / 60.0))
-
-"""
-print "\nCalculating using recursive fibonacci. Please wait..."
-print "\tUsing recursion {}".format(recursive_fibo(11))
-recursive_time = time.clock() - startTime - iterrative_time
-print "\tRun time... %.5f(secs) or %.5f(mins)" % (recursive_time, (recursive_time / 60.0))
-"""
