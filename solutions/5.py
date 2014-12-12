@@ -16,7 +16,6 @@ def is_divisible(limit):
 	print "Calculating a number that is divisible by 1 through {}...".format(limit)
 	while not all((number % n == 0) for n in xrange(2, limit+1)):
 		number += 2
-
 	return number
 
 print "\tNumber found->> {}" .format(is_divisible(20))
