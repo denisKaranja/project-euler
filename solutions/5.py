@@ -14,7 +14,7 @@ startTime = time.clock()
 def is_divisible(limit):
 	number = limit
 	print "Calculating a number that is divisible by 1 through {}...".format(limit)
-	while not all((number % n == 0) for n in range(2, limit+1)):
+	while not all((number % n == 0) for n in xrange(2, limit+1)):
 		number += 2
 
 	return number
