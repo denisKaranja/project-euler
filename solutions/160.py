@@ -11,13 +11,13 @@ Status: PENDING...
 import time
 startTime = time.clock()
 
-def factorial(num):
-	if num == 1 or num == 0:
-		return 1
-	else:
-		return num * factorial(num - 1)
+def iterative_fact(num):
+	product = 1
+	for i in xrange(num):
+		product *= i + 1
+	return product
 
-a = str(factorial(9)).replace("0","").replace("", "-").split("-")
+a = str(iterative_fact(1000)).replace("0","").replace("", "-").split("-")
 print"\n\t {}".format(a[-6:])
 time_diff = time.clock() - startTime
 print "\tRun time... %.5f(secs) or %.5f(mins)" % (time_diff, (time_diff / 60.0))
