@@ -13,9 +13,6 @@ import math
 startTime = time.clock()
 print "\nCalculating triangle word score...\n"
 
-def triangle_numbers(nth_term):
-	return ((0.5 * nth_term)*(nth_term + 1))
-
 def quadratic(c):
 	#n^2 + n -2sum = 0
 	a = 1
