@@ -20,7 +20,7 @@ def iterative_fibo(num):
 		z = x + y
 	return x
 
-j = 1
+j = 12
 print "Calculating..."
 while len(str(iterative_fibo(j))) != 1000:
     j += 1
