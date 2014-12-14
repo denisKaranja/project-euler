@@ -9,10 +9,28 @@ License type: MIT :)
 Status: PENDING...
 """
 def is_palindrome(num):
-	new_num = str(num)[::-1]
+	new_num = str(num)[::-1]#reverse string
 	if int(new_num) == num:
 		return True
 	else:
 		return False
 
-is_palindrome(90099)
+palindromes = []
+
+def multiplier_3_dig(num_one, num_two):
+	limit = 999
+	for i in xrange(1, limit+1):
+		product = num_one * num_two
+		if is_palindrome(product):
+			palindromes.append(product)
+			num_one += 1
+			num_two += 1
+		else:
+			num_one += 1
+			num_two += 1
+	return palindromes
+
+
+
+
+print multiplier_3_dig(100, 100)
