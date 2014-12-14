@@ -1,18 +1,29 @@
-#Author: Denis Karanja,
-#Institution: The University of Nairobi, Kenya,
-#Department: School of Computing and Informatics,
-#Email: dee.caranja@gmail.com,
-#Euler project solution = 25(The first term in fibonacci to contain 1000digits)
+#!/usr/bin/python
+"""
+Author: Denis Karanja,
+Institution: The University of Nairobi, Kenya,
+Department: School of Computing and Informatics, Chiromo campus
+Email: dee.caranja@gmail.com,
+Task: 25(1st fibonacci num to contain 1000 digits)
+License type: MIT :)
+Status: COMPLETED...
+"""
+import time
+startTime = time.clock()
 
 def iterative_fibo(num):
-	x = i = evenSum = 0
+	x = i = 0
 	y = z = 1
-	limit = 4000000
-
-	for i in range(num+1):
+	for i in xrange(num):
 		x = y
 		y = z
 		z = x + y
 	return x
 
-print iterative_fibo(5)
+j = 1
+print "Calculating..."
+while len(str(iterative_fibo(j))) != 1000:
+    j += 1
+
+print j
+print "Run time...{} secs \n".format(round(time.clock() - startTime, 4))
