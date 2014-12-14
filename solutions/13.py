@@ -8,6 +8,5 @@ Task: 13(sum of all the digits in number)
 License type: MIT :)
 Status: COMPLETED...
 """
-
-print str(sum([int(x) for x in open("13_nums.dat", 'r')]))[0:10]
+print (str(sum([int(x) for x in open("13_nums.dat", 'r')]))[0:10])
 
