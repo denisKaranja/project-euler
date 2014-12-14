@@ -17,7 +17,9 @@ def iterative_fact(num):
 		product *= i + 1
 	return product
 
-a = str(iterative_fact(1000)).replace("0","").replace("", "-").split("-")
-print"\n\t {}".format(a[-6:])
+print "Calculating, please wait..."
+a = str(iterative_fact(1000000000000)).replace("0","").replace("", "-").split("-")
+a = a[1:len(a)-1]
+print"\n\t {}".format(a[-5:])
 time_diff = time.clock() - startTime
 print "\tRun time... %.5f(secs) or %.5f(mins)" % (time_diff, (time_diff / 60.0))

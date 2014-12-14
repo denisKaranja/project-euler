@@ -4,14 +4,14 @@ Author: Denis Karanja,
 Institution: The University of Nairobi, Kenya,
 Department: School of Computing and Informatics, Chiromo campus
 Email: dee.caranja@gmail.com,
-Task: 5(A number that is divisible by numbers 1 through 20. eg 2520 is divisible by numbers 1 thru 10)
+Task: 104(A fibonacci number that has the first and last pandigit numbers i.e 1-9 in both ends)
 License type: MIT :)
 Status: PENDING...
 """
 import time
 startTime = time.clock()
 
-def iterrativeFibo(num):
+def iterrative_fibo(num):
 	x = i = 0
 	y = z = 1
 	for i in xrange(0, num+1):
@@ -19,39 +19,37 @@ def iterrativeFibo(num):
 		y = z
 		z = x + y
 	return x
-def sort_list(my_list):
-	for index in range(1, len(my_list)):
-		value = my_list[index]
-		i = index - 1
-		while (i >= 0) and (value < my_list[i]):
-			my_list[i+1] = my_list[i]
-			my_list[i] = value
-			i -= 1
+def last_9_list(fibo):
+	x = iterrative_fibo(fibo)
+	answer = str(x).replace("","-").split("-")
+	answer = answer[1:len(answer)-1]
 
-	return my_list
+	last_nine = str(answer[-9:])
+	first_nine = str(answer[0:9])
+	#convert from list to string
+	char_to_remove = ["'", "[", "]", ", "]
+	for char in char_to_remove:
+		if char in last_nine or char in first_nine:
+			last_nine = last_nine.replace(char, "")
+			first_nine = first_nine.replace(char, "")
 
+		#add the numbers up
+	#sorted_last_nine = sorted([l for l in last_nine])
+	#sorted_first_nine = sorted([f for f in first_nine])
+	[a, b] = [first_nine, last_nine]
+	return [a, b]
 
-last_nine = first_nine = 0
-fibo = 540
-x = iterrativeFibo(fibo)
-
-answer = str(x).replace("","-").split("-")
-answer = answer[1:len(answer)-1]
-
-last_nine = str(answer[-9:])
-first_nine = str(answer[0:9])
-
-#convert from list to string
-char_to_remove = ["'"]
-for char in char_to_remove:
-	if char in last_nine or char in first_nine:
-		last_nine = last_nine.replace(char, "")
-		first_nine = first_nine.replace(char, "")
-#add the numbers up
-#last_nine = sum([int(digit) for digit in last_nine])
-#first_nine = sum([int(digit) for digit in first_nine])
-
-print "Getting the last 9 digits..."
-print last_nine
-iterrative_time = time.clock() - startTime
-print "\tRun time... %.5f(secs) or %.5f(mins)" % (iterrative_time, (iterrative_time / 60.0))
+match = ['1', '2', '3', '4', '5', '6', '7', '8', '9']
+fibo = 100
+print "Calculating..."
+while True:
+	if not all(k in last_9_list(fibo)[1] for k in match):
+		fibo += 1
+	elif not all(j in last_9_list(fibo)[0] for j in match):
+		fibo += 1
+	else:
+		break
+ 
+print "Fibo num is {}".format(fibo+1)
+run_time = time.clock() - startTime
+print "\tRun time... %.5f(secs) or %.5f(mins)" % (run_time, (run_time / 60.0))

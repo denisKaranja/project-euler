@@ -20,4 +20,3 @@ def is_divisible(limit):
 
 print "\tNumber found->> {}" .format(is_divisible(20))
 print "\tRun time... %.5f(secs) or %.5f(mins)" % (time.clock() - startTime, ((time.clock() - startTime) / 60.0))
-#232792560
