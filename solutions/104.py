@@ -43,9 +43,9 @@ match = ['1', '2', '3', '4', '5', '6', '7', '8', '9']
 fibo = 100
 print "Calculating..."
 while True:
-	if not all(k in last_9_list(fibo)[1] for k in match):
+	if not all(k in last_9_list(fibo)[0] for k in match):
 		fibo += 1
-	elif not all(j in last_9_list(fibo)[0] for j in match):
+	elif not all(j in last_9_list(fibo)[1] for j in match):
 		fibo += 1
 	else:
 		break

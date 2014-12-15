@@ -20,6 +20,6 @@ def iterative_fact(num):
 print "Calculating, please wait..."
 a = str(iterative_fact(1000000000000)).replace("0","").replace("", "-").split("-")
 a = a[1:len(a)-1]
-print"\n\t {}".format(a[-5:])
+print"\t {}".format("".join(a[-5:]))
 time_diff = time.clock() - startTime
-print "\tRun time... %.5f(secs) or %.5f(mins)" % (time_diff, (time_diff / 60.0))
+print "\tRun time... {}(secs) or {}(mins)".format(round(time_diff, 4), round(time_diff/60, 4))
