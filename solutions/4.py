@@ -20,7 +20,6 @@ def is_palindrome(num):
 
 def multiple_palindrome(num_one = 100, num_two = 1000):
 	(palindromes, limit) = ([], 1000)
-
 	for i in range(limit + 1):
 		if num_two >= 100:
 			for j in range(limit +1):
