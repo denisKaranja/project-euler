@@ -9,12 +9,6 @@ def factorial(number):
 	else:
 		return number * factorial(number - 1)
 
-digitSum = 0
-fact = str(factorial(100))
+print sum([int(x) for x in str(factorial(100))])
 
-for digit in fact:
-	digitSum += int(digit)
-
-print digitSum
-
-#print sum(map(int,str(factorial(100)))) ----> this one iterates and add up the numbers as well
+#print sum(map(int,str(factorial(100)))) #----> this one iterates and add up the numbers as well
