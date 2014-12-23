@@ -6,7 +6,7 @@ Department: School of Computing and Informatics, Chiromo campus
 Email: dee.caranja@gmail.com,
 Task: 40(Champernowne's constant)
 License type: MIT :)
-Status: PENDING...
+Status: COMPLETED...
 """
 import time
 startTime = time.clock()
