@@ -32,8 +32,7 @@ print "Calculating sum of double base palindromes..."
 
 startTime = time.clock()
 print double_base_palindrome()
-time_diff = time.clock() - startTime
 
-print "Run time... {}(secs) or {}(mins)".format(round(time_diff, 4), round(time_diff/60, 4))
+print "Run time... {}(secs)".format(round(time.clock() - startTime, 4))
 
 
