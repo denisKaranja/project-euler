@@ -21,6 +21,7 @@ def is_palindrome(num):
 	else: return False
 
 def double_base_palindrome(limit = 1000000):
+	"""Check if a decimal number and it's equivalent binary number are both palindromes"""
 	(palindrome_sum, i) = (0, 1)
 	for i in xrange(1, limit):
 		if is_palindrome(i) and is_palindrome(int(decimal_binary(i))):
