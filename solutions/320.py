@@ -17,6 +17,7 @@ def factorial(num):
 		product *= (i + 1)
 	return product
 
+
 start = time.clock()
 print factorial(5)
 print "Run time...{}(secs)".format(time.clock()-start)
