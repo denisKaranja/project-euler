@@ -17,5 +17,5 @@ def distinct_powers(limit):
 
 	return len(sorted(set(powers)))
 
-
+print "Calculating number of distinct powers..."
 print distinct_powers(100)
