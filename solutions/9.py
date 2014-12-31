@@ -19,14 +19,14 @@ def is_pythagorean(a, b, c):
 
 def find_pyth(a, b, c):
 	for x in xrange(1000):
-		for y in xrange(x + 1, 1000):
+		for y in xrange(1, 1000):
 			z = 1000 - x - y
-			if is_pythagorean(x, y, z) and ((x + y + z) == 1000):
-				return "{} from ->> {}".format(x*y*z, (x, y, z))
+			if is_pythagorean(x, y, z) and x + y + z == 1000:
+				return "{} ->>({})".format(x*y*z, (x, y, z))
 	
 
 print "Calculating pythagorean triplet..."
 print find_pyth(a, b, c)
-print "Run time... {} secs\n".format(round((time.clock() - startTime), 4))
+print "Run time... {} secs\n".format(round((time.clock() - startTime), 5))
 
 

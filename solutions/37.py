@@ -23,15 +23,14 @@ def is_prime(num):
 	return True
 
 def truncate(num):
-	"""Truncates a number digit by digit checking whether the new number is prime"""
+	"""Truncates a number digit by digit checking whether the new number is prime
+	return the number if conditions are met otherwise 0"""
 	flag = 1
 	if is_prime(num):
 		length = len(str(num))
 		for i in range(1, length):
-			r_to_l = str(num)[0:i]
-			l_to_r = str(num)[length-i:]
-			r_to_l  =int(r_to_l)
-			l_to_r = int(l_to_r)
+			r_to_l = int(str(num)[0:i])
+			l_to_r = int(str(num)[length-i:])
 
 			if is_prime(r_to_l) and is_prime(l_to_r):
 				flag *= 2
@@ -50,7 +49,7 @@ def main():
 		if len(truncs_sum) is 11:
 			break
 			
-	return (len(truncs_sum), sum(truncs_sum))
+	return (truncs_sum, len(truncs_sum), "Sum -> "+str(sum(truncs_sum)))
 
 
 if __name__ == "__main__":

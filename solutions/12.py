@@ -46,7 +46,7 @@ def greatest_factor(limit, factors, i = 500):
 		i += 1
 
 startTime = time.clock()
-print greatest_factor(100000, 500)
+print greatest_factor(100000, 50)
 done = time.clock() - startTime
 print "Run time... {}(secs) or {}(mins)".format(round(done, 5), round(done / 60, 5))
 

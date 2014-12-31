@@ -1,23 +1,39 @@
 #include <stdio.h>
 
 //function prototypes
-int prime(int);
-int maxValue(int [], int);
+//int prime(int);
+int max_value(int [], int);
+int min_value(int [], int);
 
-int maxValue(int array[], int elem)
+int max_value(int array[], int elem)
 {
 	int i = 0;
 	int max;
 
+	max = array[i];
 	for(i = 0;i < elem;i++)
 	{
-		max = array[i];
 		if(array[i] > max)
 		{
-			array[i] = max;
+			max = array[i];
 		}
 	}
 	return max;
+}
+
+int min_value(int array[], int elem)
+{
+	int i = 0;
+	int min;
+	min = array[i];
+	for (i = 0; i < elem; i++)
+	{
+		if(array[i] < min)
+		{
+			min = array[i];
+		}
+	}
+	return min;
 }
 
 int prime(int number)
@@ -42,45 +58,43 @@ int prime(int number)
 		division += 2;
 	}
 
-	return 1;
+	return 1 == 1;
 }
 
 int main(){
-	/*int readPrime;
+	int readPrime;
 
-	printf("Enter number to find if its prime\n");
+	/*printf("Enter number to find if its prime\n");
 	scanf("%d", &readPrime);
-	printf("is %d a prime?? \n",readPrime );
-	printf("%d\n", prime(readPrime));
-	
+	printf("is %d a prime??[1 for Yes, 0 for No] \n",readPrime );
+	printf("%d\n", prime(readPrime));*/
 	int elements, i = 0, j = 0, k = 0;
-	printf("How many elemnnts do you want to insert in array?\n");
+	start:
+	printf("How many elements do you want to insert in array?\n");
 	scanf("%d", &elements);
-	printf("Please input %d elements\n", elements);
 
-	int numberArray[elements];
-
-	for(i = 0;i < elements;i++)
+	if(sizeof(elements) == sizeof(int))
 	{
-		scanf("%d", &numberArray[i]);
-	}*/
-	int target = 13195, k = 0;
-	int output[100];
+		printf("Please input %d elements\n", elements);
+		int numberArray[elements];
 
-	while(k <= target)
-	{
-		if(prime(k) == 1)
+		for(i = 0;i < elements;i++)
 		{
-			if(target % k == 0)
-			{
-				output[k] = k;
-			}
+			scanf("%d", &numberArray[i]);
 		}
-		k++;
-	}
-	int size = (sizeof(output) / sizeof(int));
-	printf("Size of array : %d\n",size );
-	printf("Largest prime factor of %d is %d\n", target, maxValue(output, size));
 
-	return 0;
+		printf("\n[");
+		for(j = 0; j < elements; j++)
+		{
+			printf("%d, ", numberArray[j]);
+		}
+		printf("]\nMax Value ->> %d\n", max_value(numberArray, elements));
+		printf("Min value ->> %d\n", min_value(numberArray, elements));
+	}
+	else
+	{
+		printf("Please input an integer\n");
+		goto start;
+	}
+	
 }
