@@ -18,5 +18,5 @@ def iter_self_power(num, list_sum = 0):
 
 startTime = time.clock()
 a = iter_self_power(1000)
-print str(a)[-10:]
+print a % pow(10, 10)#Gives the last n digits equivalent to a[-10:]
 print "Program took %f secsonds to execute" % (time.clock() - startTime)
