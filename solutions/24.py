@@ -15,7 +15,7 @@ def generate(my_list):
 	for x in permutations(my_list):
 		solutions.append(x)
 
-	return sorted(solutions)[999999]
+	return str(sorted(solutions)[999999]).replace(", ", "")
 
 a = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 start = time.clock()
